@@ -1,0 +1,245 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Charles Tekpor — Portfolio | EwenamTech",
+  description:
+    "Charles Tekpor — Full-Stack Developer & Network Management professional, founder of EwenamTech, aspiring Cloud Security Specialist.",
+};
+
+const SKILL_GROUPS = [
+  {
+    label: "Full-Stack Development",
+    items: ["React", "Next.js", "TypeScript", "JavaScript (ES6)", "Node.js", "Tailwind CSS", "Vite"],
+  },
+  {
+    label: "Backend & Data",
+    items: ["Supabase (PostgreSQL)", "Row-Level Security", "Edge Functions / Deno", "Prisma ORM", "Zod validation", "MySQL"],
+  },
+  {
+    label: "Authentication & Security",
+    items: ["Auth.js (JWT, RBAC)", "Role-based access control", "SMS OTP (Arkesel API)", "Secure server actions"],
+  },
+  {
+    label: "DevOps & Tooling",
+    items: ["Git & GitHub", "CI/CD on Vercel", "Vitest", "Progressive Web Apps"],
+  },
+  {
+    label: "AI-Augmented Development",
+    items: ["Claude Code", "AI-assisted architecture & debugging", "Prompt engineering (code generation & review)"],
+  },
+  {
+    label: "IT Support & Networking",
+    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware diagnostics"],
+  },
+  {
+    label: "Security & Cyber Tools",
+    items: ["Kali Linux", "Wireshark", "Nmap", "GNS3", "VMware", "Penetration testing", "Zabbix"],
+  },
+  {
+    label: "Other",
+    items: ["Python (Pillow)", "Java", "Leaflet / OpenStreetMap", "Canva", "Microsoft Office & Google Workspace"],
+  },
+];
+
+const EXPERIENCE = [
+  {
+    title: "IT Support Assistant (Contract Staff)",
+    org: "Akuapem Community Bank PLC — Mamfe, Eastern Region, Ghana",
+    period: "Jan 2025 – Present",
+    bullets: [
+      "Provide technical support to bank staff, diagnosing and resolving hardware, software, and user-related issues.",
+      "Install, configure, and maintain Windows OS and Windows Server environments; administer Active Directory (AD DS).",
+      "Manage IT asset inventory across multiple branches; prepare monthly IT reports.",
+      "Support network operations (connectivity troubleshooting, switch installation, LAN testing) and endpoint security.",
+    ],
+  },
+  {
+    title: "IT Support Intern",
+    org: "Akuapem Community Bank PLC — Mamfe, Eastern Region, Ghana",
+    period: "Oct 2024 – Nov 2024",
+    bullets: [
+      "Installed/configured Windows OS, drivers, and business applications; diagnosed and repaired hardware/software issues.",
+      "Assisted with network troubleshooting, antivirus support, and boardroom technology setup.",
+    ],
+  },
+  {
+    title: "Teacher — Computing, Mathematics & Science",
+    org: "Mamfe Apostolic School Complex, Ghana",
+    period: "Jan 2023 – Dec 2024",
+    bullets: [
+      "Delivered Mathematics, Computing, and Science lessons to Basic 7–9 students; developed lesson plans aligned with the GES curriculum.",
+      "Diagnosed, repaired, and maintained school computers; managed the computer lab and CCTV systems.",
+    ],
+  },
+];
+
+const EDUCATION = [
+  {
+    title: "HND, Computer Network Management",
+    school: "Koforidua Technical University — Koforidua, Eastern Region, Ghana",
+    period: "2024 – Exp. 2026",
+    note: "Graduating soon. Coursework: Computer Networking · Network Security · Operating Systems · Database Management · Systems Administration · Network Infrastructure & Troubleshooting.",
+  },
+  {
+    title: "WASSCE",
+    school: "Dorfor Senior High School, Ghana",
+    period: "2015 – 2018",
+    note: "West African Senior School Certificate Examination.",
+  },
+  {
+    title: "BECE",
+    school: "Juapong Methodist Junior High School, Ghana",
+    period: "2012 – 2015",
+    note: "Basic Education Certificate Examination.",
+  },
+];
+
+const CERTIFICATIONS = [
+  { tag: "2026", tone: "text-green-400 bg-green-400/15", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
+  { tag: "IN PROGRESS", tone: "text-amber-400 bg-amber-400/15", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
+  { tag: "PLANNED", tone: "text-zinc-400 bg-zinc-400/15", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
+];
+
+export default function PortfolioPage() {
+  return (
+    <div className="bg-zinc-950">
+      {/* Intro */}
+      <section className="border-b border-white/10 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+            The developer behind EwenamTech
+          </div>
+          <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
+            Charles Tekpor
+          </h1>
+          <p className="mb-4 max-w-2xl text-lg leading-relaxed text-zinc-300">
+            Full-stack developer and IT support professional who ships production software
+            end-to-end — from database schema and secure backend logic to responsive
+            front-end interfaces and CI/CD deployment. Sole or lead developer on multiple
+            live platforms, including a full-stack salon booking PWA and a school management
+            system with a 22-table, Row-Level-Security-protected database.
+          </p>
+          <p className="max-w-2xl text-zinc-500">
+            Combines this with hands-on enterprise IT experience — Windows Server, Active
+            Directory, network administration — and a teaching background that sharpens
+            communication and documentation. Building toward a career in cloud security and
+            secure systems architecture.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-2">
+            {["Full-Stack Development", "Cloud Security", "System Administration", "Teaching"].map((c) => (
+              <span key={c} className="rounded-md border border-amber-300/25 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-200/90">
+                {c}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Experience */}
+      <section className="border-b border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+            Experience
+          </div>
+          <div className="flex flex-col gap-5">
+            {EXPERIENCE.map((e) => (
+              <div key={e.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-lg font-semibold text-white">{e.title}</h3>
+                  <span className="font-mono text-xs text-cyan-400">{e.period}</span>
+                </div>
+                <div className="mb-4 text-sm text-zinc-500">{e.org}</div>
+                <ul className="flex flex-col gap-2">
+                  {e.bullets.map((b) => (
+                    <li key={b} className="text-sm leading-relaxed text-zinc-400">
+                      • {b}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+      <section className="border-b border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+            Skills &amp; Certifications
+          </div>
+          <div className="mb-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <h3 className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
+              Technical Skills
+            </h3>
+            <div className="flex flex-col gap-4">
+              {SKILL_GROUPS.map((g) => (
+                <div key={g.label}>
+                  <div className="mb-2 text-xs font-medium text-zinc-500">{g.label}</div>
+                  <div className="flex flex-wrap gap-2">
+                    {g.items.map((item) => (
+                      <span key={item} className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1.5 text-xs text-cyan-100">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-amber-300">
+                Certifications
+              </h3>
+              <div className="flex flex-col gap-4">
+                {CERTIFICATIONS.map((c) => (
+                  <div key={c.name}>
+                    <div className="mb-1 flex items-center gap-2">
+                      <span className={`rounded px-2 py-0.5 text-[10px] font-bold ${c.tone}`}>{c.tag}</span>
+                      <span className="text-sm font-semibold text-zinc-200">{c.name}</span>
+                    </div>
+                    <div className="text-xs leading-relaxed text-zinc-500">{c.org}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
+                Tools &amp; Platforms
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {["Windows 10/11", "Windows Server", "AD DS", "Git & GitHub", "Vercel", "Supabase", "VMware Workstation", "GNS3", "Cisco", "VyOS", "MikroTik CHR", "FortiGate", "Wireshark", "Kali Linux", "Nmap", "Zabbix", "Claude AI"].map((t) => (
+                  <span key={t} className="rounded border border-white/10 px-2.5 py-1 font-mono text-xs text-zinc-400">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Education */}
+      <section className="px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+            Education
+          </div>
+          <div className="flex flex-col gap-4">
+            {EDUCATION.map((e) => (
+              <div key={e.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+                <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
+                  <h3 className="text-base font-semibold text-white">{e.title}</h3>
+                  <span className="font-mono text-xs text-cyan-400">{e.period}</span>
+                </div>
+                <div className="mb-2 text-sm text-zinc-500">{e.school}</div>
+                <div className="text-sm leading-relaxed text-zinc-500">{e.note}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}
