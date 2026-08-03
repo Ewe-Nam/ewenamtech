@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Charles Tekpor — Portfolio | EwenamTech",
+  title: "Charles Tekpor — Portfolio | EwenamTech Services",
   description:
-    "Charles Tekpor — Network Management professional specialising in LAN/WAN infrastructure, network security, and systems administration, with full-stack development experience. Founder of EwenamTech.",
+    "Charles Tekpor — Network Management professional specialising in LAN/WAN infrastructure, network security, and systems administration, with full-stack development experience. Founder of EwenamTech Services.",
 };
 
 const SKILL_GROUPS = [
@@ -89,7 +89,7 @@ const EXPERIENCE = [
   },
   {
     title: "Hardware Repair Technician (Freelance)",
-    org: "EwenamTech — Smart Solutions, Trusted Repairs",
+    org: "EwenamTech Services — Smart Solutions, Trusted Repairs",
     period: "Ongoing",
     bullets: [
       "Diagnose and repair computer and device hardware faults for private clients alongside web development work, building a reputation for reliable, trusted repairs.",
@@ -132,7 +132,7 @@ export default function PortfolioPage() {
         <div className="mx-auto grid max-w-4xl grid-cols-1 items-start gap-10 sm:grid-cols-[1fr_auto]">
           <div>
             <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
-              The developer behind EwenamTech
+              The developer behind EwenamTech Services
             </div>
             <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
               Charles Tekpor
@@ -148,7 +148,7 @@ export default function PortfolioPage() {
               That same infrastructure grounding extends into full-stack development: sole
               or lead developer on multiple live platforms, including a salon booking PWA
               and a school management system with a 22-table, Row-Level-Security-protected
-              database — plus hardware repair work under the EwenamTech name.
+              database — plus hardware repair work under the EwenamTech Services name.
             </p>
             <p className="text-sky-200/60">
               A teaching background sharpens the communication and documentation side.

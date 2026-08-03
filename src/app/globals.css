@@ -7,24 +7,25 @@
 /* ---- EwenamTech sea-blue palette ----
    Lighter at the surface, deeper as you scroll. */
 :root {
-  --sea-surface: #14567c;
-  --sea-mid: #0e3f5d;
-  --sea-deep: #092d44;
-  --sea-abyss: #061f30;
-  --sea-accent: #38bdf8;
-  --sea-accent-soft: #7dd3fc;
-  --sea-foam: #e0f2fe;
+  --sea-surface: #0a90c9;
+  --sea-mid: #0672a3;
+  --sea-deep: #05557c;
+  --sea-abyss: #043c5a;
+  --sea-accent: #22d3ee;
+  --sea-accent-soft: #67e8f9;
+  --sea-foam: #ecfeff;
   --sand: #fbbf24;
 }
 
 body.sea {
   background:
-    radial-gradient(120% 70% at 80% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+    radial-gradient(100% 60% at 78% -12%, rgba(103, 232, 249, 0.35), transparent 62%),
+    radial-gradient(80% 50% at 8% 4%, rgba(34, 211, 238, 0.22), transparent 60%),
     linear-gradient(
       180deg,
       var(--sea-surface) 0%,
-      var(--sea-mid) 28%,
-      var(--sea-deep) 62%,
+      var(--sea-mid) 30%,
+      var(--sea-deep) 64%,
       var(--sea-abyss) 100%
     );
   background-attachment: fixed;

@@ -18,7 +18,8 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-sky-200/15 bg-sky-950/50 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-sm font-bold uppercase tracking-[0.2em] text-white">
-          Ewenam<span className="text-cyan-400">Tech</span>
+          Ewenam<span className="text-cyan-300">Tech</span>{" "}
+          <span className="font-medium tracking-[0.18em] text-sky-200/70">Services</span>
         </Link>
 
         <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-wider text-sky-100/70 sm:flex">

@@ -54,7 +54,7 @@ const PROJECTS = [
     badge: "Live Website · Freelance",
     title: "MASCO Marketing Website",
     subtitle: "Mamfe Apostolic School Complex — Marketing Website",
-    role: "Web Developer & Designer, Freelance (EwenamTech)",
+    role: "Web Developer & Designer, Freelance (EwenamTech Services)",
     href: "https://masco-eta.vercel.app",
     hrefLabel: "masco-eta.vercel.app",
     description:

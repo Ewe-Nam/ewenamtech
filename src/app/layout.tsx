@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EwenamTech — Networking, IT Infrastructure & Software",
+  title: "EwenamTech Services — Networking, IT Infrastructure & Software",
   description:
-    "EwenamTech — network management and IT infrastructure first: LAN/WAN, Windows Server, Active Directory, and hardware repair, plus production web platforms. Run by Charles Tekpor.",
+    "EwenamTech Services — network management and IT infrastructure first: LAN/WAN, Windows Server, Active Directory, and hardware repair, plus production web platforms. Run by Charles Tekpor.",
   openGraph: {
-    title: "EwenamTech — Networking, IT Infrastructure & Software",
+    title: "EwenamTech Services — Networking, IT Infrastructure & Software",
     description:
       "Networking & infrastructure, IT support & systems administration, hardware repair, and full-stack development.",
     type: "website",
