@@ -70,7 +70,7 @@ const PROJECTS = [
 
 export default function WorkSection() {
   return (
-    <section id="work" className="border-t border-white/10 bg-zinc-950 py-24">
+    <section id="work" className="border-t border-sky-200/15 py-24">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-2xl">
           <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
@@ -85,14 +85,14 @@ export default function WorkSection() {
           {PROJECTS.map((p) => (
             <div
               key={p.title}
-              className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-xl transition-colors hover:border-white/20 sm:p-10"
+              className="relative overflow-hidden rounded-3xl border border-sky-200/15 bg-sky-100/10 p-8 backdrop-blur-xl transition-colors hover:border-sky-200/35 sm:p-10"
             >
-              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/80">
+              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
                 {p.badge}
               </div>
               <h3 className="mb-1 text-2xl font-semibold text-white sm:text-3xl">{p.title}</h3>
-              <p className="mb-3 text-sm text-zinc-400">{p.subtitle}</p>
-              <div className="mb-6 flex flex-wrap items-center gap-2 text-xs font-mono text-zinc-500">
+              <p className="mb-3 text-sm text-sky-100/70">{p.subtitle}</p>
+              <div className="mb-6 flex flex-wrap items-center gap-2 text-xs font-mono text-sky-200/60">
                 <span>{p.role}</span>
                 <span>·</span>
                 {p.href ? (
@@ -103,19 +103,19 @@ export default function WorkSection() {
                   <span>{p.hrefLabel}</span>
                 )}
               </div>
-              <p className="mb-6 max-w-3xl text-sm leading-relaxed text-zinc-300 sm:text-base">
+              <p className="mb-6 max-w-3xl text-sm leading-relaxed text-sky-100 sm:text-base">
                 {p.description}
               </p>
               <ul className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
                 {p.highlights.map((h) => (
-                  <li key={h} className="border-l-2 border-cyan-400/40 pl-3 text-sm leading-relaxed text-zinc-400">
+                  <li key={h} className="border-l-2 border-cyan-400/40 pl-3 text-sm leading-relaxed text-sky-100/70">
                     {h}
                   </li>
                 ))}
               </ul>
               <div className="flex flex-wrap gap-2">
                 {p.stack.map((t) => (
-                  <span key={t} className="rounded-full border border-white/10 px-3 py-1 text-xs text-zinc-300">
+                  <span key={t} className="rounded-full border border-sky-200/15 px-3 py-1 text-xs text-sky-100">
                     {t}
                   </span>
                 ))}

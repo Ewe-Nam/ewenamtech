@@ -120,15 +120,15 @@ const EDUCATION = [
 
 const CERTIFICATIONS = [
   { tag: "2026", tone: "text-green-400 bg-green-400/15", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
-  { tag: "PLANNED", tone: "text-zinc-400 bg-zinc-400/15", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
-  { tag: "PLANNED", tone: "text-zinc-400 bg-zinc-400/15", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
+  { tag: "PLANNED", tone: "text-sky-200/70 bg-sky-200/12", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
+  { tag: "PLANNED", tone: "text-sky-200/70 bg-sky-200/12", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
 ];
 
 export default function PortfolioPage() {
   return (
-    <div className="bg-zinc-950">
+    <div className="">
       {/* Intro */}
-      <section className="border-b border-white/10 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
+      <section className="border-b border-sky-200/15 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-4xl grid-cols-1 items-start gap-10 sm:grid-cols-[1fr_auto]">
           <div>
             <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
@@ -137,32 +137,32 @@ export default function PortfolioPage() {
             <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
               Charles Tekpor
             </h1>
-            <p className="mb-4 text-lg leading-relaxed text-zinc-300">
+            <p className="mb-4 text-lg leading-relaxed text-sky-100">
               Network management professional specialising in LAN/WAN infrastructure,
               network security, and systems administration — backed by an HND in Computer
               Network Management and daily hands-on work maintaining a multi-branch bank
               network, from switch configuration and connectivity troubleshooting to
               Windows Server and Active Directory.
             </p>
-            <p className="mb-4 text-zinc-400">
+            <p className="mb-4 text-sky-100/70">
               That same infrastructure grounding extends into full-stack development: sole
               or lead developer on multiple live platforms, including a salon booking PWA
               and a school management system with a 22-table, Row-Level-Security-protected
               database — plus hardware repair work under the EwenamTech name.
             </p>
-            <p className="text-zinc-500">
+            <p className="text-sky-200/60">
               A teaching background sharpens the communication and documentation side.
               Building toward a career in cloud security and secure network architecture.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Networking", "Network Security", "Systems Administration", "Hardware Repair", "Full-Stack Development"].map((c) => (
-                <span key={c} className="rounded-md border border-amber-300/25 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-200/90">
+                <span key={c} className="rounded-md border border-cyan-300/30 bg-cyan-300/12 px-3 py-1.5 font-mono text-xs text-cyan-100">
                   {c}
                 </span>
               ))}
             </div>
           </div>
-          <div className="relative -order-1 w-40 shrink-0 overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:order-none sm:w-52">
+          <div className="relative -order-1 w-40 shrink-0 overflow-hidden rounded-3xl border border-sky-200/15 shadow-2xl sm:order-none sm:w-52">
             <Image
               src="/profile.jpg"
               alt="Charles Tekpor"
@@ -171,28 +171,28 @@ export default function PortfolioPage() {
               priority
               className="h-full w-full object-cover"
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/70 to-transparent" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-sky-950/60 to-transparent" />
           </div>
         </div>
       </section>
 
       {/* Experience */}
-      <section className="border-b border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="border-b border-sky-200/15 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
             Experience
           </div>
           <div className="flex flex-col gap-5">
             {EXPERIENCE.map((e) => (
-              <div key={e.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <div key={e.title} className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="text-lg font-semibold text-white">{e.title}</h3>
                   <span className="font-mono text-xs text-cyan-400">{e.period}</span>
                 </div>
-                <div className="mb-4 text-sm text-zinc-500">{e.org}</div>
+                <div className="mb-4 text-sm text-sky-200/60">{e.org}</div>
                 <ul className="flex flex-col gap-2">
                   {e.bullets.map((b) => (
-                    <li key={b} className="text-sm leading-relaxed text-zinc-400">
+                    <li key={b} className="text-sm leading-relaxed text-sky-100/70">
                       • {b}
                     </li>
                   ))}
@@ -204,12 +204,12 @@ export default function PortfolioPage() {
       </section>
 
       {/* Skills */}
-      <section className="border-b border-white/10 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="border-b border-sky-200/15 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
           <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
             Skills &amp; Certifications
           </div>
-          <div className="mb-6 rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+          <div className="mb-6 rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
             <h3 className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
               Technical Skills
             </h3>
@@ -217,7 +217,7 @@ export default function PortfolioPage() {
               {SKILL_GROUPS.map((g) => (
                 <div key={g.label}>
                   <div className="mb-2 flex items-center gap-2">
-                    <span className={`text-xs font-medium ${g.lead ? "text-cyan-300" : "text-zinc-500"}`}>
+                    <span className={`text-xs font-medium ${g.lead ? "text-cyan-300" : "text-sky-200/60"}`}>
                       {g.label}
                     </span>
                     {g.lead && (
@@ -245,7 +245,7 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <div className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
               <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-amber-300">
                 Certifications
               </h3>
@@ -254,20 +254,20 @@ export default function PortfolioPage() {
                   <div key={c.name}>
                     <div className="mb-1 flex items-center gap-2">
                       <span className={`rounded px-2 py-0.5 text-[10px] font-bold ${c.tone}`}>{c.tag}</span>
-                      <span className="text-sm font-semibold text-zinc-200">{c.name}</span>
+                      <span className="text-sm font-semibold text-sky-50">{c.name}</span>
                     </div>
-                    <div className="text-xs leading-relaxed text-zinc-500">{c.org}</div>
+                    <div className="text-xs leading-relaxed text-sky-200/60">{c.org}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <div className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
               <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
                 Tools &amp; Platforms
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Windows 10/11", "Windows Server", "AD DS", "Git & GitHub", "Vercel", "Supabase", "VMware Workstation", "GNS3", "Cisco", "VyOS", "MikroTik CHR", "FortiGate", "Wireshark", "Kali Linux", "Nmap", "Zabbix", "Claude AI"].map((t) => (
-                  <span key={t} className="rounded border border-white/10 px-2.5 py-1 font-mono text-xs text-zinc-400">
+                  <span key={t} className="rounded border border-sky-200/15 px-2.5 py-1 font-mono text-xs text-sky-100/70">
                     {t}
                   </span>
                 ))}
@@ -285,13 +285,13 @@ export default function PortfolioPage() {
           </div>
           <div className="flex flex-col gap-4">
             {EDUCATION.map((e) => (
-              <div key={e.title} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <div key={e.title} className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
                   <h3 className="text-base font-semibold text-white">{e.title}</h3>
                   <span className="font-mono text-xs text-cyan-400">{e.period}</span>
                 </div>
-                <div className="mb-2 text-sm text-zinc-500">{e.school}</div>
-                <div className="text-sm leading-relaxed text-zinc-500">{e.note}</div>
+                <div className="mb-2 text-sm text-sky-200/60">{e.school}</div>
+                <div className="text-sm leading-relaxed text-sky-200/60">{e.note}</div>
               </div>
             ))}
           </div>

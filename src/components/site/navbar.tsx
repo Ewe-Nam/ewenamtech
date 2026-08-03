@@ -15,13 +15,13 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/70 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-sky-200/15 bg-sky-950/50 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="text-sm font-bold uppercase tracking-[0.2em] text-white">
           Ewenam<span className="text-cyan-400">Tech</span>
         </Link>
 
-        <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-wider text-zinc-400 sm:flex">
+        <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-wider text-sky-100/70 sm:flex">
           {LINKS.map((l) => (
             <Link key={l.href} href={l.href} className="transition-colors hover:text-white">
               {l.label}
@@ -32,7 +32,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Link
             href="/#contact"
-            className="hidden items-center rounded-full bg-white px-4 py-2 text-xs font-semibold text-zinc-950 transition-colors hover:bg-zinc-200 sm:inline-flex"
+            className="hidden items-center rounded-full bg-white px-4 py-2 text-xs font-semibold text-sky-950 transition-colors hover:bg-sky-50 sm:inline-flex"
           >
             Start a project
           </Link>
@@ -41,7 +41,7 @@ export default function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white sm:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-sky-200/15 bg-sky-100/10 text-white sm:hidden"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -49,8 +49,8 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-zinc-950/95 px-4 py-4 backdrop-blur-xl sm:hidden">
-          <div className="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-zinc-300">
+        <div className="border-t border-sky-200/15 bg-sky-950/85 px-4 py-4 backdrop-blur-xl sm:hidden">
+          <div className="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-sky-100">
             {LINKS.map((l) => (
               <Link
                 key={l.href}
@@ -64,7 +64,7 @@ export default function Navbar() {
             <Link
               href="/#contact"
               onClick={() => setOpen(false)}
-              className="mt-1 inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-zinc-950"
+              className="mt-1 inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-sky-950"
             >
               Start a project
             </Link>

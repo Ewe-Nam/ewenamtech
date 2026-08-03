@@ -4,6 +4,33 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ---- EwenamTech sea-blue palette ----
+   Lighter at the surface, deeper as you scroll. */
+:root {
+  --sea-surface: #14567c;
+  --sea-mid: #0e3f5d;
+  --sea-deep: #092d44;
+  --sea-abyss: #061f30;
+  --sea-accent: #38bdf8;
+  --sea-accent-soft: #7dd3fc;
+  --sea-foam: #e0f2fe;
+  --sand: #fbbf24;
+}
+
+body.sea {
+  background:
+    radial-gradient(120% 70% at 80% -10%, rgba(56, 189, 248, 0.18), transparent 60%),
+    linear-gradient(
+      180deg,
+      var(--sea-surface) 0%,
+      var(--sea-mid) 28%,
+      var(--sea-deep) 62%,
+      var(--sea-abyss) 100%
+    );
+  background-attachment: fixed;
+  background-color: var(--sea-deep);
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

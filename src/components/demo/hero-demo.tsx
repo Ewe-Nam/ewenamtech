@@ -3,7 +3,7 @@ import HeroSection from '@/components/ui/glassmorphism-trust-hero';
 
 export default function HeroDemo() {
   return (
-    <div className="w-full h-screen overflow-y-auto bg-zinc-950">
+    <div className="sea w-full h-screen overflow-y-auto">
       <HeroSection />
     </div>
   );
