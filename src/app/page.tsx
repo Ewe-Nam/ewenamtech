@@ -1,4 +1,4 @@
-import HeroSection from "@/components/ui/glassmorphism-trust-hero";
+import HeroSection from "@/components/site/hero";
 import WhatWeDoSection from "@/components/site/what-we-do-section";
 import WorkSection from "@/components/site/work-section";
 import ContactSection from "@/components/site/contact-section";

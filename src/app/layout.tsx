@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Navbar from "@/components/site/navbar";
 import Footer from "@/components/site/footer";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Archivo: signage/wayfinding heritage — infrastructure, not startup.
+const display = Archivo({
+  variable: "--font-display",
   subsets: ["latin"],
+  weight: ["600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const body = IBM_Plex_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
+  weight: ["400", "500", "600"],
+});
+
+// Monospace for the things that genuinely are monospace: IPs, ports, labels.
+const mono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -23,6 +33,11 @@ export const metadata: Metadata = {
     description:
       "Networking & infrastructure, IT support & systems administration, hardware repair, and full-stack development.",
     type: "website",
+    images: [{ url: "/logo.png", width: 440, height: 431, alt: "EwenamTech Services" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/logo.png"],
   },
 };
 
@@ -34,9 +49,9 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
+      className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased dark`}
     >
-      <body className="sea min-h-full flex flex-col text-sky-50">
+      <body className="sea min-h-full flex flex-col font-[family-name:var(--font-body)]">
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />

@@ -1,63 +1,50 @@
 import { Mail, Phone, Link2, GitBranch, FileDown } from "lucide-react";
 
+const LINKS = [
+  { href: "tel:+233248468450", icon: Phone, label: "+233 248 468 450" },
+  { href: "https://www.linkedin.com/in/charles-tekpor", icon: Link2, label: "LinkedIn", ext: true },
+  { href: "https://github.com/Ewe-Nam", icon: GitBranch, label: "GitHub", ext: true },
+  { href: "/Charles_Tekpor_CV.pdf", icon: FileDown, label: "Download CV", download: true },
+];
+
 export default function ContactSection() {
   return (
-    <section id="contact" className="border-t border-sky-200/15 py-24">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden rounded-3xl border border-sky-200/15 bg-sky-100/10 p-10 text-center backdrop-blur-xl sm:p-14">
-          <div className="pointer-events-none absolute -top-32 left-1/2 h-64 w-96 -translate-x-1/2 rounded-full bg-cyan-400/10 blur-3xl" />
-          <div className="relative">
-            <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
-              Let&apos;s build something
-            </div>
-            <h2 className="mb-3 text-3xl font-medium tracking-tight text-white sm:text-4xl">
-              Have a project in mind?
-            </h2>
-            <p className="mx-auto mb-8 max-w-md text-sm text-sky-100/70 sm:text-base">
-              Open to full-stack development, IT support, network, and cloud-security work —
-              and to collaboration with the security community.
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-3">
-              <a
-                href="mailto:tekporcharles77@gmail.com"
-                className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-sky-950 transition-colors hover:bg-sky-50"
-              >
-                <Mail className="h-4 w-4" /> tekporcharles77@gmail.com
-              </a>
-              <a
-                href="tel:+233248468450"
-                className="inline-flex items-center gap-2 rounded-full border border-sky-200/15 bg-sky-100/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-200/15"
-              >
-                <Phone className="h-4 w-4" /> +233 248 468 450
-              </a>
-              <a
-                href="https://www.linkedin.com/in/charles-tekpor"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-sky-200/15 bg-sky-100/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-200/15"
-              >
-                <Link2 className="h-4 w-4" /> LinkedIn
-              </a>
-              <a
-                href="https://github.com/Ewe-Nam"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border border-sky-200/15 bg-sky-100/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-200/15"
-              >
-                <GitBranch className="h-4 w-4" /> GitHub
-              </a>
-              <a
-                href="/Charles_Tekpor_CV.pdf"
-                download
-                className="inline-flex items-center gap-2 rounded-full border border-sky-200/15 bg-sky-100/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-sky-200/15"
-              >
-                <FileDown className="h-4 w-4" /> Download CV
-              </a>
-            </div>
-            <div className="mt-6 font-mono text-xs text-sky-200/60">
-              Mamfe-Akuapem, Eastern Region, Ghana
-            </div>
-          </div>
+    <section id="contact" className="py-20 lg:py-28">
+      <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <div className="eyebrow mb-3 text-cyan-200/75">Get in touch</div>
+        <h2 className="text-[clamp(1.9rem,4vw,2.75rem)] font-bold leading-tight text-white">
+          Tell us what needs fixing.
+        </h2>
+        <p className="mx-auto mt-4 max-w-lg text-sky-100/80">
+          Networks, systems, hardware or software — describe the problem and
+          you&apos;ll get a straight answer on whether we can help.
+        </p>
+
+        <a
+          href="mailto:tekporcharles77@gmail.com"
+          className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-[color:var(--foam)] px-7 py-4 text-sm font-semibold text-[color:var(--ink)] transition hover:bg-white"
+        >
+          <Mail className="h-4 w-4" />
+          tekporcharles77@gmail.com
+        </a>
+
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3">
+          {LINKS.map((l) => (
+            <a
+              key={l.label}
+              href={l.href}
+              {...(l.ext ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              {...(l.download ? { download: true } : {})}
+              className="inline-flex items-center gap-2 text-sm text-sky-100/85 underline-offset-4 transition hover:text-white hover:underline"
+            >
+              <l.icon className="h-4 w-4 text-cyan-300" />
+              {l.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="eyebrow mt-10 text-cyan-200/50">
+          Mamfe-Akuapem · Eastern Region · Ghana
         </div>
       </div>
     </section>
