@@ -29,7 +29,7 @@ const SKILL_GROUPS = [
   },
   {
     label: "IT Support & Networking",
-    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware diagnostics"],
+    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware Repair & Diagnostics"],
   },
   {
     label: "Security & Cyber Tools",
