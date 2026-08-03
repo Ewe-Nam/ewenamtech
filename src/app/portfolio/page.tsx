@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Charles Tekpor — Portfolio | EwenamTech",
@@ -28,8 +29,12 @@ const SKILL_GROUPS = [
     items: ["Claude Code", "AI-assisted architecture & debugging", "Prompt engineering (code generation & review)"],
   },
   {
+    label: "Hardware Repair & Diagnostics",
+    items: ["Motherboard-level troubleshooting", "Component-level repair", "Printers & peripherals", "Power issues"],
+  },
+  {
     label: "IT Support & Networking",
-    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware Repair & Diagnostics"],
+    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware diagnostics"],
   },
   {
     label: "Security & Cyber Tools",
@@ -47,7 +52,7 @@ const EXPERIENCE = [
     org: "Akuapem Community Bank PLC — Mamfe, Eastern Region, Ghana",
     period: "Jan 2025 – Present",
     bullets: [
-      "Provide technical support to bank staff, diagnosing and resolving hardware, software, and user-related issues.",
+      "Provide technical support to bank staff, diagnosing and resolving hardware, software, and user-related issues; personally repair the majority of the bank's device hardware faults — motherboards, power issues, peripherals, printers — reducing reliance on external vendors.",
       "Install, configure, and maintain Windows OS and Windows Server environments; administer Active Directory (AD DS).",
       "Manage IT asset inventory across multiple branches; prepare monthly IT reports.",
       "Support network operations (connectivity troubleshooting, switch installation, LAN testing) and endpoint security.",
@@ -69,6 +74,14 @@ const EXPERIENCE = [
     bullets: [
       "Delivered Mathematics, Computing, and Science lessons to Basic 7–9 students; developed lesson plans aligned with the GES curriculum.",
       "Diagnosed, repaired, and maintained school computers; managed the computer lab and CCTV systems.",
+    ],
+  },
+  {
+    title: "Hardware Repair Technician (Freelance)",
+    org: "EwenamTech — Smart Solutions, Trusted Repairs",
+    period: "Ongoing",
+    bullets: [
+      "Diagnose and repair computer and device hardware faults for private clients alongside web development work, building a reputation for reliable, trusted repairs.",
     ],
   },
 ];
@@ -96,7 +109,7 @@ const EDUCATION = [
 
 const CERTIFICATIONS = [
   { tag: "2026", tone: "text-green-400 bg-green-400/15", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
-  { tag: "IN PROGRESS", tone: "text-amber-400 bg-amber-400/15", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
+  { tag: "PLANNED", tone: "text-zinc-400 bg-zinc-400/15", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
   { tag: "PLANNED", tone: "text-zinc-400 bg-zinc-400/15", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
 ];
 
@@ -105,32 +118,46 @@ export default function PortfolioPage() {
     <div className="bg-zinc-950">
       {/* Intro */}
       <section className="border-b border-white/10 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl">
-          <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
-            The developer behind EwenamTech
+        <div className="mx-auto grid max-w-4xl grid-cols-1 items-start gap-10 sm:grid-cols-[1fr_auto]">
+          <div>
+            <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+              The developer behind EwenamTech
+            </div>
+            <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
+              Charles Tekpor
+            </h1>
+            <p className="mb-4 text-lg leading-relaxed text-zinc-300">
+              Full-stack developer and IT support professional who ships production software
+              end-to-end — from database schema and secure backend logic to responsive
+              front-end interfaces and CI/CD deployment. Sole or lead developer on multiple
+              live platforms, including a full-stack salon booking PWA and a school management
+              system with a 22-table, Row-Level-Security-protected database.
+            </p>
+            <p className="text-zinc-500">
+              Combines this with hands-on enterprise IT experience — Windows Server, Active
+              Directory, network administration — plus hardware repair work under the
+              EwenamTech name, and a teaching background that sharpens communication and
+              documentation. Building toward a career in cloud security and secure systems
+              architecture.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Full-Stack Development", "Hardware Repair", "Cloud Security", "System Administration", "Teaching"].map((c) => (
+                <span key={c} className="rounded-md border border-amber-300/25 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-200/90">
+                  {c}
+                </span>
+              ))}
+            </div>
           </div>
-          <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
-            Charles Tekpor
-          </h1>
-          <p className="mb-4 max-w-2xl text-lg leading-relaxed text-zinc-300">
-            Full-stack developer and IT support professional who ships production software
-            end-to-end — from database schema and secure backend logic to responsive
-            front-end interfaces and CI/CD deployment. Sole or lead developer on multiple
-            live platforms, including a full-stack salon booking PWA and a school management
-            system with a 22-table, Row-Level-Security-protected database.
-          </p>
-          <p className="max-w-2xl text-zinc-500">
-            Combines this with hands-on enterprise IT experience — Windows Server, Active
-            Directory, network administration — and a teaching background that sharpens
-            communication and documentation. Building toward a career in cloud security and
-            secure systems architecture.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {["Full-Stack Development", "Cloud Security", "System Administration", "Teaching"].map((c) => (
-              <span key={c} className="rounded-md border border-amber-300/25 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-200/90">
-                {c}
-              </span>
-            ))}
+          <div className="relative -order-1 w-40 shrink-0 overflow-hidden rounded-3xl border border-white/10 shadow-2xl sm:order-none sm:w-52">
+            <Image
+              src="/profile.jpg"
+              alt="Charles Tekpor"
+              width={834}
+              height={1080}
+              priority
+              className="h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-zinc-950/70 to-transparent" />
           </div>
         </div>
       </section>
