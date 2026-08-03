@@ -70,57 +70,59 @@ const PROJECTS = [
 
 export default function WorkSection() {
   return (
-    <section id="work" className="border-t border-sky-200/15 py-24">
+    <section id="work" className="py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-12 max-w-2xl">
-          <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
-            Selected work
-          </div>
-          <h2 className="text-3xl font-medium tracking-tight text-white sm:text-4xl">
+        <div className="mb-10 max-w-2xl">
+          <div className="eyebrow mb-3 text-cyan-200/75">Selected work</div>
+          <h2 className="text-[clamp(1.9rem,4vw,2.75rem)] font-bold leading-tight text-white">
             Featured Projects
           </h2>
         </div>
 
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-5">
           {PROJECTS.map((p) => (
-            <div
-              key={p.title}
-              className="relative overflow-hidden rounded-3xl border border-sky-200/15 bg-sky-100/10 p-8 backdrop-blur-xl transition-colors hover:border-sky-200/35 sm:p-10"
-            >
-              <div className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300/90">
-                {p.badge}
-              </div>
-              <h3 className="mb-1 text-2xl font-semibold text-white sm:text-3xl">{p.title}</h3>
-              <p className="mb-3 text-sm text-sky-100/70">{p.subtitle}</p>
-              <div className="mb-6 flex flex-wrap items-center gap-2 text-xs font-mono text-sky-200/60">
+            <article key={p.title} className="panel p-7 sm:p-9">
+              <div className="eyebrow mb-3 text-[color:var(--sea)]">{p.badge}</div>
+              <h3 className="text-2xl font-bold sm:text-[1.75rem]">{p.title}</h3>
+              <p className="muted mt-1">{p.subtitle}</p>
+              <div className="mt-3 flex flex-wrap items-center gap-2 font-[family-name:var(--font-mono)] text-xs text-[color:var(--ink-soft)]">
                 <span>{p.role}</span>
-                <span>·</span>
+                <span aria-hidden>·</span>
                 {p.href ? (
-                  <a href={p.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-cyan-400 hover:text-cyan-300">
+                  <a
+                    href={p.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-medium text-[color:var(--sea)] underline underline-offset-2"
+                  >
                     {p.hrefLabel} ↗
                   </a>
                 ) : (
                   <span>{p.hrefLabel}</span>
                 )}
               </div>
-              <p className="mb-6 max-w-3xl text-sm leading-relaxed text-sky-100 sm:text-base">
-                {p.description}
-              </p>
-              <ul className="mb-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <p className="muted mt-5 max-w-3xl leading-relaxed">{p.description}</p>
+              <ul className="mt-6 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
                 {p.highlights.map((h) => (
-                  <li key={h} className="border-l-2 border-cyan-400/40 pl-3 text-sm leading-relaxed text-sky-100/70">
+                  <li
+                    key={h}
+                    className="border-l-2 border-[color:var(--sea)]/30 pl-3 text-[15px] leading-relaxed text-[color:var(--ink-soft)]"
+                  >
                     {h}
                   </li>
                 ))}
               </ul>
-              <div className="flex flex-wrap gap-2">
+              <div className="mt-6 flex flex-wrap gap-2">
                 {p.stack.map((t) => (
-                  <span key={t} className="rounded-full border border-sky-200/15 px-3 py-1 text-xs text-sky-100">
+                  <span
+                    key={t}
+                    className="rounded-full bg-[color:var(--sea)]/8 px-3 py-1 font-[family-name:var(--font-mono)] text-xs text-[color:var(--sea)]"
+                  >
                     {t}
                   </span>
                 ))}
               </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

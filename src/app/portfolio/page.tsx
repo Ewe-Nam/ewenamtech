@@ -119,19 +119,19 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
-  { tag: "2026", tone: "text-green-400 bg-green-400/15", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
-  { tag: "PLANNED", tone: "text-sky-200/70 bg-sky-200/12", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
-  { tag: "PLANNED", tone: "text-sky-200/70 bg-sky-200/12", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
+  { tag: "2026", tone: "text-[color:var(--link-up)] bg-[color:var(--link-up)]/12", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
+  { tag: "PLANNED", tone: "text-[color:var(--ink-soft)] bg-[color:var(--ink-soft)]/12", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
+  { tag: "PLANNED", tone: "text-[color:var(--ink-soft)] bg-[color:var(--ink-soft)]/12", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
 ];
 
 export default function PortfolioPage() {
   return (
     <div className="">
       {/* Intro */}
-      <section className="border-b border-sky-200/15 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
+      <section className="border-b border-cyan-200/15 px-4 pt-20 pb-16 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-4xl grid-cols-1 items-start gap-10 sm:grid-cols-[1fr_auto]">
           <div>
-            <div className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+            <div className="eyebrow mb-3 text-cyan-200/75">
               The developer behind EwenamTech Services
             </div>
             <h1 className="mb-6 text-4xl font-medium tracking-tight text-white sm:text-5xl">
@@ -156,7 +156,7 @@ export default function PortfolioPage() {
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
               {["Networking", "Network Security", "Systems Administration", "Hardware Repair", "Full-Stack Development"].map((c) => (
-                <span key={c} className="rounded-md border border-cyan-300/30 bg-cyan-300/12 px-3 py-1.5 font-mono text-xs text-cyan-100">
+                <span key={c} className="rounded-full border border-cyan-200/35 px-3 py-1.5 font-[family-name:var(--font-mono)] text-xs text-cyan-100">
                   {c}
                 </span>
               ))}
@@ -177,22 +177,22 @@ export default function PortfolioPage() {
       </section>
 
       {/* Experience */}
-      <section className="border-b border-sky-200/15 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="border-b border-cyan-200/15 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+          <div className="eyebrow mb-8 text-cyan-200/75">
             Experience
           </div>
           <div className="flex flex-col gap-5">
             {EXPERIENCE.map((e) => (
-              <div key={e.title} className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
+              <div key={e.title} className="panel p-6">
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="text-lg font-semibold text-white">{e.title}</h3>
-                  <span className="font-mono text-xs text-cyan-400">{e.period}</span>
+                  <h3 className="text-lg font-bold">{e.title}</h3>
+                  <span className="font-[family-name:var(--font-mono)] text-xs text-[color:var(--sea)]">{e.period}</span>
                 </div>
-                <div className="mb-4 text-sm text-sky-200/60">{e.org}</div>
+                <div className="mb-4 muted text-sm">{e.org}</div>
                 <ul className="flex flex-col gap-2">
                   {e.bullets.map((b) => (
-                    <li key={b} className="text-sm leading-relaxed text-sky-100/70">
+                    <li key={b} className="muted text-sm leading-relaxed">
                       • {b}
                     </li>
                   ))}
@@ -204,24 +204,24 @@ export default function PortfolioPage() {
       </section>
 
       {/* Skills */}
-      <section className="border-b border-sky-200/15 px-4 py-16 sm:px-6 lg:px-8">
+      <section className="border-b border-cyan-200/15 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+          <div className="eyebrow mb-8 text-cyan-200/75">
             Skills &amp; Certifications
           </div>
-          <div className="mb-6 rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
-            <h3 className="mb-5 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
+          <div className="mb-6 panel p-6">
+            <h3 className="eyebrow mb-5 text-[color:var(--sea)]">
               Technical Skills
             </h3>
             <div className="flex flex-col gap-4">
               {SKILL_GROUPS.map((g) => (
                 <div key={g.label}>
                   <div className="mb-2 flex items-center gap-2">
-                    <span className={`text-xs font-medium ${g.lead ? "text-cyan-300" : "text-sky-200/60"}`}>
+                    <span className={`text-xs font-medium ${g.lead ? "text-[color:var(--sea)] font-semibold" : "text-[color:var(--ink-soft)]"}`}>
                       {g.label}
                     </span>
                     {g.lead && (
-                      <span className="rounded bg-cyan-400/15 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-cyan-400">
+                      <span className="rounded bg-[color:var(--sea)]/12 px-1.5 py-0.5 font-[family-name:var(--font-mono)] text-[9px] uppercase tracking-wider text-[color:var(--sea)]">
                         Core
                       </span>
                     )}
@@ -232,8 +232,8 @@ export default function PortfolioPage() {
                         key={item}
                         className={`rounded-full px-3 py-1.5 text-xs ${
                           g.lead
-                            ? "border border-cyan-400/40 bg-cyan-400/15 text-cyan-50"
-                            : "border border-cyan-400/25 bg-cyan-400/10 text-cyan-100"
+                            ? "bg-[color:var(--sea)] text-white"
+                            : "bg-[color:var(--sea)]/10 text-[color:var(--sea)]"
                         }`}
                       >
                         {item}
@@ -245,29 +245,29 @@ export default function PortfolioPage() {
             </div>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <div className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
-              <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-amber-300">
+            <div className="panel p-6">
+              <h3 className="eyebrow mb-4 text-[#b45309]">
                 Certifications
               </h3>
               <div className="flex flex-col gap-4">
                 {CERTIFICATIONS.map((c) => (
                   <div key={c.name}>
                     <div className="mb-1 flex items-center gap-2">
-                      <span className={`rounded px-2 py-0.5 text-[10px] font-bold ${c.tone}`}>{c.tag}</span>
-                      <span className="text-sm font-semibold text-sky-50">{c.name}</span>
+                      <span className={`rounded px-2 py-0.5 font-[family-name:var(--font-mono)] text-[10px] font-medium ${c.tone}`}>{c.tag}</span>
+                      <span className="text-sm font-semibold">{c.name}</span>
                     </div>
-                    <div className="text-xs leading-relaxed text-sky-200/60">{c.org}</div>
+                    <div className="muted text-xs leading-relaxed">{c.org}</div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
-              <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.18em] text-cyan-400">
+            <div className="panel p-6">
+              <h3 className="eyebrow mb-4 text-[color:var(--sea)]">
                 Tools &amp; Platforms
               </h3>
               <div className="flex flex-wrap gap-2">
                 {["Windows 10/11", "Windows Server", "AD DS", "Git & GitHub", "Vercel", "Supabase", "VMware Workstation", "GNS3", "Cisco", "VyOS", "MikroTik CHR", "FortiGate", "Wireshark", "Kali Linux", "Nmap", "Zabbix", "Claude AI"].map((t) => (
-                  <span key={t} className="rounded border border-sky-200/15 px-2.5 py-1 font-mono text-xs text-sky-100/70">
+                  <span key={t} className="rounded bg-[color:var(--sea)]/8 px-2.5 py-1 font-[family-name:var(--font-mono)] text-xs text-[color:var(--ink-soft)]">
                     {t}
                   </span>
                 ))}
@@ -280,18 +280,18 @@ export default function PortfolioPage() {
       {/* Education */}
       <section className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl">
-          <div className="mb-8 text-xs font-semibold uppercase tracking-[0.24em] text-cyan-400">
+          <div className="eyebrow mb-8 text-cyan-200/75">
             Education
           </div>
           <div className="flex flex-col gap-4">
             {EDUCATION.map((e) => (
-              <div key={e.title} className="rounded-2xl border border-sky-200/15 bg-sky-100/10 p-6 backdrop-blur-xl">
+              <div key={e.title} className="panel p-6">
                 <div className="mb-1 flex flex-wrap items-baseline justify-between gap-2">
-                  <h3 className="text-base font-semibold text-white">{e.title}</h3>
-                  <span className="font-mono text-xs text-cyan-400">{e.period}</span>
+                  <h3 className="text-base font-bold">{e.title}</h3>
+                  <span className="font-[family-name:var(--font-mono)] text-xs text-[color:var(--sea)]">{e.period}</span>
                 </div>
-                <div className="mb-2 text-sm text-sky-200/60">{e.school}</div>
-                <div className="text-sm leading-relaxed text-sky-200/60">{e.note}</div>
+                <div className="mb-2 muted text-sm">{e.school}</div>
+                <div className="muted text-sm leading-relaxed">{e.note}</div>
               </div>
             ))}
           </div>
