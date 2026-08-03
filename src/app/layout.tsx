@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Archivo, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import Navbar from "@/components/site/navbar";
 import Footer from "@/components/site/footer";
+import Backdrop from "@/components/site/backdrop";
 import "./globals.css";
 
 // Archivo: signage/wayfinding heritage — infrastructure, not startup.
@@ -52,6 +53,7 @@ export default function RootLayout({
       className={`${display.variable} ${body.variable} ${mono.variable} h-full antialiased dark`}
     >
       <body className="sea min-h-full flex flex-col font-[family-name:var(--font-body)]">
+        <Backdrop />
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
