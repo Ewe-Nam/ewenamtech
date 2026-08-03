@@ -4,10 +4,33 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Charles Tekpor — Portfolio | EwenamTech",
   description:
-    "Charles Tekpor — Full-Stack Developer & Network Management professional, founder of EwenamTech, aspiring Cloud Security Specialist.",
+    "Charles Tekpor — Network Management professional specialising in LAN/WAN infrastructure, network security, and systems administration, with full-stack development experience. Founder of EwenamTech.",
 };
 
 const SKILL_GROUPS = [
+  {
+    label: "Networking & Infrastructure",
+    lead: true,
+    items: ["LAN/WAN troubleshooting", "TCP/IP & IPv4", "Switch installation & configuration", "Ethernet cabling", "Connectivity testing", "Network topology design"],
+  },
+  {
+    label: "Network Simulation & Virtualization",
+    lead: true,
+    items: ["GNS3", "VMware Workstation", "VyOS", "MikroTik CHR", "Cisco networking concepts", "FortiGate fundamentals"],
+  },
+  {
+    label: "Network Security & Monitoring",
+    lead: true,
+    items: ["Wireshark", "Nmap", "Kali Linux", "Packet analysis", "Penetration testing", "Zabbix", "iperf", "Endpoint protection"],
+  },
+  {
+    label: "Windows & Systems Administration",
+    items: ["Windows Server", "Active Directory (AD DS)", "Group Policy", "Account & access management", "Windows 10/11"],
+  },
+  {
+    label: "Hardware Repair & Diagnostics",
+    items: ["Motherboard-level troubleshooting", "Component-level repair", "Printers & peripherals", "Power issues"],
+  },
   {
     label: "Full-Stack Development",
     items: ["React", "Next.js", "TypeScript", "JavaScript (ES6)", "Node.js", "Tailwind CSS", "Vite"],
@@ -17,7 +40,7 @@ const SKILL_GROUPS = [
     items: ["Supabase (PostgreSQL)", "Row-Level Security", "Edge Functions / Deno", "Prisma ORM", "Zod validation", "MySQL"],
   },
   {
-    label: "Authentication & Security",
+    label: "Authentication & App Security",
     items: ["Auth.js (JWT, RBAC)", "Role-based access control", "SMS OTP (Arkesel API)", "Secure server actions"],
   },
   {
@@ -27,18 +50,6 @@ const SKILL_GROUPS = [
   {
     label: "AI-Augmented Development",
     items: ["Claude Code", "AI-assisted architecture & debugging", "Prompt engineering (code generation & review)"],
-  },
-  {
-    label: "Hardware Repair & Diagnostics",
-    items: ["Motherboard-level troubleshooting", "Component-level repair", "Printers & peripherals", "Power issues"],
-  },
-  {
-    label: "IT Support & Networking",
-    items: ["Windows Server", "Active Directory (AD DS)", "LAN/WAN troubleshooting", "TCP/IP", "Hardware diagnostics"],
-  },
-  {
-    label: "Security & Cyber Tools",
-    items: ["Kali Linux", "Wireshark", "Nmap", "GNS3", "VMware", "Penetration testing", "Zabbix"],
   },
   {
     label: "Other",
@@ -127,21 +138,24 @@ export default function PortfolioPage() {
               Charles Tekpor
             </h1>
             <p className="mb-4 text-lg leading-relaxed text-zinc-300">
-              Full-stack developer and IT support professional who ships production software
-              end-to-end — from database schema and secure backend logic to responsive
-              front-end interfaces and CI/CD deployment. Sole or lead developer on multiple
-              live platforms, including a full-stack salon booking PWA and a school management
-              system with a 22-table, Row-Level-Security-protected database.
+              Network management professional specialising in LAN/WAN infrastructure,
+              network security, and systems administration — backed by an HND in Computer
+              Network Management and daily hands-on work maintaining a multi-branch bank
+              network, from switch configuration and connectivity troubleshooting to
+              Windows Server and Active Directory.
+            </p>
+            <p className="mb-4 text-zinc-400">
+              That same infrastructure grounding extends into full-stack development: sole
+              or lead developer on multiple live platforms, including a salon booking PWA
+              and a school management system with a 22-table, Row-Level-Security-protected
+              database — plus hardware repair work under the EwenamTech name.
             </p>
             <p className="text-zinc-500">
-              Combines this with hands-on enterprise IT experience — Windows Server, Active
-              Directory, network administration — plus hardware repair work under the
-              EwenamTech name, and a teaching background that sharpens communication and
-              documentation. Building toward a career in cloud security and secure systems
-              architecture.
+              A teaching background sharpens the communication and documentation side.
+              Building toward a career in cloud security and secure network architecture.
             </p>
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Full-Stack Development", "Hardware Repair", "Cloud Security", "System Administration", "Teaching"].map((c) => (
+              {["Networking", "Network Security", "Systems Administration", "Hardware Repair", "Full-Stack Development"].map((c) => (
                 <span key={c} className="rounded-md border border-amber-300/25 bg-amber-300/10 px-3 py-1.5 font-mono text-xs text-amber-200/90">
                   {c}
                 </span>
@@ -202,10 +216,26 @@ export default function PortfolioPage() {
             <div className="flex flex-col gap-4">
               {SKILL_GROUPS.map((g) => (
                 <div key={g.label}>
-                  <div className="mb-2 text-xs font-medium text-zinc-500">{g.label}</div>
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className={`text-xs font-medium ${g.lead ? "text-cyan-300" : "text-zinc-500"}`}>
+                      {g.label}
+                    </span>
+                    {g.lead && (
+                      <span className="rounded bg-cyan-400/15 px-1.5 py-0.5 font-mono text-[9px] uppercase tracking-wider text-cyan-400">
+                        Core
+                      </span>
+                    )}
+                  </div>
                   <div className="flex flex-wrap gap-2">
                     {g.items.map((item) => (
-                      <span key={item} className="rounded-full border border-cyan-400/25 bg-cyan-400/10 px-3 py-1.5 text-xs text-cyan-100">
+                      <span
+                        key={item}
+                        className={`rounded-full px-3 py-1.5 text-xs ${
+                          g.lead
+                            ? "border border-cyan-400/40 bg-cyan-400/15 text-cyan-50"
+                            : "border border-cyan-400/25 bg-cyan-400/10 text-cyan-100"
+                        }`}
+                      >
                         {item}
                       </span>
                     ))}

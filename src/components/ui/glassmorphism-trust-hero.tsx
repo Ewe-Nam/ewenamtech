@@ -75,7 +75,7 @@ export default function HeroSection() {
             <div className="animate-fade-in delay-100">
               <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1.5 backdrop-blur-md transition-colors hover:bg-white/10">
                 <span className="text-[10px] sm:text-xs font-semibold uppercase tracking-wider text-zinc-300 flex items-center gap-2">
-                  Full-Stack Development Studio
+                  Networking · Infrastructure · Software
                   <Cpu className="w-3.5 h-3.5 text-cyan-400" />
                 </span>
               </div>
@@ -89,18 +89,18 @@ export default function HeroSection() {
                 WebkitMaskImage: "linear-gradient(180deg, black 0%, black 80%, transparent 100%)"
               }}
             >
-              Crafting Full-Stack<br />
+              Networks That<br />
               <span className="bg-gradient-to-br from-white via-white to-[#ffcd75] bg-clip-text text-transparent">
-                Software
+                Hold
               </span><br />
-              That Delivers
+              Everything Up
             </h1>
 
             {/* Description */}
             <p className="animate-fade-in delay-300 max-w-xl text-lg text-zinc-400 leading-relaxed">
-              We build production-grade web platforms and secure systems — from booking
-              engines to school management software — combining clean engineering with
-              interfaces people actually enjoy using.
+              Network management and IT infrastructure first — LAN/WAN, Windows Server,
+              Active Directory, and hardware kept running. Plus production web platforms
+              built on the same foundation.
             </p>
 
             {/* CTA Buttons */}
@@ -131,8 +131,8 @@ export default function HeroSection() {
                     <Target className="h-6 w-6 text-white" />
                   </div>
                   <div>
-                    <div className="text-3xl font-bold tracking-tight text-white">4+</div>
-                    <div className="text-sm text-zinc-400">Platforms Shipped</div>
+                    <div className="text-3xl font-bold tracking-tight text-white">HND</div>
+                    <div className="text-sm text-zinc-400">Computer Network Management</div>
                   </div>
                 </div>
 
@@ -151,11 +151,11 @@ export default function HeroSection() {
 
                 {/* Mini Stats Grid */}
                 <div className="grid grid-cols-3 gap-4 text-center">
-                  <StatItem value="3+" label="Years" />
+                  <StatItem value="Multi" label="Branch Networks" />
                   <div className="w-px h-full bg-white/10 mx-auto" />
-                  <StatItem value="Direct" label="Client Access" />
+                  <StatItem value="4+" label="Platforms Shipped" />
                   <div className="w-px h-full bg-white/10 mx-auto" />
-                  <StatItem value="100%" label="Code Ownership" />
+                  <StatItem value="Cisco" label="Certified Basics" />
                 </div>
 
                 {/* Tag Pills */}
@@ -169,7 +169,7 @@ export default function HeroSection() {
                   </div>
                   <div className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-medium tracking-wide text-zinc-300">
                     <Cpu className="w-3 h-3 text-cyan-400" />
-                    AI-AUGMENTED DEV
+                    NETWORK MANAGEMENT
                   </div>
                 </div>
               </div>

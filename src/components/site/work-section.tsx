@@ -1,5 +1,22 @@
 const PROJECTS = [
   {
+    badge: "Networking · Research Project · 2026",
+    title: "Accra Metropolitan Area Network",
+    subtitle: "Performance Analysis & Penetration Testing",
+    role: "Sole Researcher & Network Designer",
+    href: null,
+    hrefLabel: "Academic research project",
+    description:
+      "Designed and simulated a metropolitan-scale network in GNS3 to evaluate both performance and security. Analysed throughput, latency, packet loss, and jitter using Wireshark and iperf, then conducted penetration testing with Kali Linux to surface vulnerabilities and recommend hardening measures.",
+    highlights: [
+      "Metropolitan-scale routed topology designed and simulated in GNS3",
+      "Throughput, latency, packet loss & jitter measured with Wireshark and iperf",
+      "Penetration testing with Kali Linux to surface and harden vulnerabilities",
+      "Findings written up as hardening recommendations for the simulated network",
+    ],
+    stack: ["GNS3", "Wireshark", "Kali Linux", "iperf", "VyOS", "TCP/IP", "Penetration testing"],
+  },
+  {
     badge: "Live Platform · 2025–2026",
     title: "CBT StyleHub",
     subtitle: "Full-Stack Salon Booking & Management Platform",
