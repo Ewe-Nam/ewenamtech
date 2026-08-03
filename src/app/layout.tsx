@@ -33,6 +33,11 @@ export const metadata: Metadata = {
     description:
       "Networking & infrastructure, IT support & systems administration, hardware repair, and full-stack development.",
     type: "website",
+    images: [{ url: "/logo.png", width: 440, height: 431, alt: "EwenamTech Services" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/logo.png"],
   },
 };
 

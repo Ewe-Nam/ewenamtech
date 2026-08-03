@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
@@ -16,10 +17,16 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-cyan-200/20 bg-[#052f45]/80 backdrop-blur-xl">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="font-[family-name:var(--font-display)] text-sm font-bold uppercase tracking-[0.18em] text-white">
-          Ewenam<span className="text-[color:var(--activity)]">Tech</span>{" "}
-          <span className="font-medium tracking-[0.18em] text-sky-100/85">Services</span>
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:px-6 lg:px-8">
+        <Link href="/" className="flex items-center">
+          <Image
+            src="/logo-mark.png"
+            alt="EwenamTech Services"
+            width={264}
+            height={203}
+            className="h-14 w-auto"
+            priority
+          />
         </Link>
 
         <div className="hidden items-center gap-8 text-xs font-medium uppercase tracking-wider text-sky-100/70 sm:flex">
