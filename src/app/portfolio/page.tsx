@@ -246,7 +246,7 @@ export default function PortfolioPage() {
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div className="panel p-6">
-              <h3 className="eyebrow mb-4 text-[#b45309]">
+              <h3 className="eyebrow mb-4 text-[color:var(--brand-orange-ink)]">
                 Certifications
               </h3>
               <div className="flex flex-col gap-4">

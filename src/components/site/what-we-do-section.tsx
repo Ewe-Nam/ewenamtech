@@ -82,10 +82,10 @@ export default function WhatWeDoSection() {
               className="absolute inset-y-0 left-0 w-1.5 bg-[color:var(--activity)]"
             />
             <div className="mb-5 flex items-center gap-3">
-              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[color:var(--activity)]/15 text-[#b45309]">
+              <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[color:var(--activity)]/15 text-[color:var(--brand-orange-ink)]">
                 <Wrench className="h-5 w-5" />
               </span>
-              <span className="eyebrow text-[#b45309]">Smart Solutions, Trusted Repairs</span>
+              <span className="eyebrow text-[color:var(--brand-orange-ink)]">Smart Solutions, Trusted Repairs</span>
             </div>
             <h3 className="text-2xl font-bold">Hardware Repair Services</h3>
             <p className="muted mt-3 max-w-2xl leading-relaxed">

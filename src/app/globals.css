@@ -19,8 +19,11 @@
   --foam: #f4fbfe;
   --ink: #06293c;
   --ink-soft: #3d6b83;
-  --link-up: #16a34a;
-  --activity: #f59e0b;
+  /* Taken from the logo: the green bracket and the orange "TECH".
+     They double as RJ45 link-light colours (link up / activity). */
+  --link-up: #2f9e5f;
+  --activity: #f0a02e;
+  --brand-orange-ink: #a8620a;
 }
 
 body.sea {
