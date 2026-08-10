@@ -263,7 +263,7 @@ export default function PortfolioPage() {
                         href={c.certificate}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="mt-1 inline-block text-xs font-semibold text-[color:var(--sea)] hover:underline"
+                        className="mt-0.5 inline-flex min-h-11 items-center text-xs font-semibold text-[color:var(--sea)] hover:underline"
                       >
                         View certificate ↗
                       </a>
