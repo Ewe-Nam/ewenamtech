@@ -119,6 +119,7 @@ const EDUCATION = [
 ];
 
 const CERTIFICATIONS = [
+  { tag: "AUG 2026", tone: "text-[color:var(--link-up)] bg-[color:var(--link-up)]/12", name: "Introduction to Cybersecurity", org: "Cisco Networking Academy — threat landscape, attack types, protecting data and privacy, and the cybersecurity industry.", certificate: "/cisco-intro-to-cybersecurity.pdf" },
   { tag: "2026", tone: "text-[color:var(--link-up)] bg-[color:var(--link-up)]/12", name: "Networking Basics", org: "Cisco Networking Academy — network devices, IP addressing, protocols, connectivity, and basic troubleshooting." },
   { tag: "PLANNED", tone: "text-[color:var(--ink-soft)] bg-[color:var(--ink-soft)]/12", name: "CompTIA Security+", org: "Core security concepts, threats, and risk management." },
   { tag: "PLANNED", tone: "text-[color:var(--ink-soft)] bg-[color:var(--ink-soft)]/12", name: "AWS Certified Security – Specialty", org: "Securing workloads and data in AWS." },
@@ -257,6 +258,16 @@ export default function PortfolioPage() {
                       <span className="text-sm font-semibold">{c.name}</span>
                     </div>
                     <div className="muted text-xs leading-relaxed">{c.org}</div>
+                    {c.certificate && (
+                      <a
+                        href={c.certificate}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-1 inline-block text-xs font-semibold text-[color:var(--sea)] hover:underline"
+                      >
+                        View certificate ↗
+                      </a>
+                    )}
                   </div>
                 ))}
               </div>
