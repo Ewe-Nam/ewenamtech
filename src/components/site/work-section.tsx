@@ -1,7 +1,11 @@
+import Image from "next/image";
+
 const PROJECTS = [
   {
     badge: "Networking · Research Project · 2026",
     title: "Accra Metropolitan Area Network",
+    shot: "/shots/accra-man.jpg",
+    shotAlt: "GNS3 topology diagram of the simulated metropolitan network",
     subtitle: "Performance Analysis & Penetration Testing",
     role: "Sole Researcher & Network Designer",
     href: null,
@@ -19,6 +23,8 @@ const PROJECTS = [
   {
     badge: "Live Platform · 2025–2026",
     title: "CBT StyleHub",
+    shot: "/shots/cbt-stylehub.jpg",
+    shotAlt: "CBT StyleHub progressive web app landing screen",
     subtitle: "Full-Stack Salon Booking & Management Platform",
     role: "Project Manager & Technical Lead (3-person team)",
     href: "https://cbt-stylehub.vercel.app",
@@ -36,6 +42,8 @@ const PROJECTS = [
   {
     badge: "Live & In Production · v1.0",
     title: "MASCO Staff Portal",
+    shot: "/shots/masco-portal.jpg",
+    shotAlt: "Staff sign-in screen of the MASCO school portal",
     subtitle: "Mamfe Apostolic School Complex — Staff Portal",
     role: "Sole Full-Stack Developer",
     href: null,
@@ -53,6 +61,8 @@ const PROJECTS = [
   {
     badge: "Live Website · Freelance",
     title: "MASCO Marketing Website",
+    shot: "/shots/masco-website.jpg",
+    shotAlt: "Home page of the Mamfe Apostolic School Complex website",
     subtitle: "Mamfe Apostolic School Complex — Marketing Website",
     role: "Web Developer & Designer, Freelance (EwenamTech Services)",
     href: "https://masco-eta.vercel.app",
@@ -81,7 +91,19 @@ export default function WorkSection() {
 
         <div className="flex flex-col gap-5">
           {PROJECTS.map((p) => (
-            <article key={p.title} className="panel p-7 sm:p-9">
+            <article key={p.title} className="panel overflow-hidden p-7 sm:p-9">
+              {p.shot && (
+                <div className="mb-7 overflow-hidden rounded-xl border border-[color:var(--sea)]/15 bg-[color:var(--sea)]/5">
+                  <Image
+                    src={p.shot}
+                    alt={p.shotAlt}
+                    width={1280}
+                    height={800}
+                    sizes="(max-width: 1024px) 100vw, 1120px"
+                    className="h-auto w-full"
+                  />
+                </div>
+              )}
               <div className="eyebrow mb-3 text-[color:var(--sea)]">{p.badge}</div>
               <h3 className="text-2xl font-bold sm:text-[1.75rem]">{p.title}</h3>
               <p className="muted mt-1">{p.subtitle}</p>
