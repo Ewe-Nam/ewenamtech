@@ -49,7 +49,7 @@ export default function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-cyan-200/20 bg-sky-100/10 text-white sm:hidden"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cyan-200/20 bg-sky-100/10 text-white sm:hidden"
           >
             {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
@@ -58,13 +58,13 @@ export default function Navbar() {
 
       {open && (
         <div className="border-t border-cyan-200/20 bg-sky-950/85 px-4 py-4 backdrop-blur-xl sm:hidden">
-          <div className="flex flex-col gap-4 text-sm font-medium uppercase tracking-wider text-sky-100">
+          <div className="flex flex-col gap-1 text-sm font-medium uppercase tracking-wider text-sky-100">
             {LINKS.map((l) => (
               <Link
                 key={l.href}
                 href={l.href}
                 onClick={() => setOpen(false)}
-                className="transition-colors hover:text-white"
+                className="flex min-h-11 items-center transition-colors hover:text-white"
               >
                 {l.label}
               </Link>

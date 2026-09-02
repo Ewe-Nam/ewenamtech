@@ -1,7 +1,11 @@
-import { Mail, Phone, Link2, GitBranch, FileDown } from "lucide-react";
+import { Mail, Phone, MessageCircle, Link2, GitBranch, FileDown } from "lucide-react";
+
+// wa.me needs the number in international form with no +, spaces or dashes.
+const WHATSAPP = "https://wa.me/233248468450";
 
 const LINKS = [
   { href: "tel:+233248468450", icon: Phone, label: "+233 248 468 450" },
+  { href: WHATSAPP, icon: MessageCircle, label: "WhatsApp", ext: true },
   { href: "https://www.linkedin.com/in/charles-tekpor", icon: Link2, label: "LinkedIn", ext: true },
   { href: "https://github.com/Ewe-Nam", icon: GitBranch, label: "GitHub", ext: true },
   { href: "/Charles_Tekpor_CV.pdf", icon: FileDown, label: "Download CV", download: true },
@@ -35,7 +39,7 @@ export default function ContactSection() {
               href={l.href}
               {...(l.ext ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               {...(l.download ? { download: true } : {})}
-              className="inline-flex items-center gap-2 text-sm text-sky-100/85 underline-offset-4 transition hover:text-white hover:underline"
+              className="inline-flex min-h-11 items-center gap-2 px-1 text-sm text-sky-100/85 underline-offset-4 transition hover:text-white hover:underline"
             >
               <l.icon className="h-4 w-4 text-cyan-300" />
               {l.label}
