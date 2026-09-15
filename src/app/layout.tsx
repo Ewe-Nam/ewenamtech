@@ -25,21 +25,49 @@ const mono = IBM_Plex_Mono({
   weight: ["400", "500"],
 });
 
+const SITE = "https://ewenamtech.vercel.app";
+
 export const metadata: Metadata = {
-  title: "EwenamTech Services — Networking, IT Infrastructure & Software",
+  metadataBase: new URL(SITE),
+  title: {
+    default:
+      "EwenamTech — Network Infrastructure, IT Support & Cybersecurity in Ghana",
+    template: "%s | EwenamTech",
+  },
   description:
-    "EwenamTech Services — network management and IT infrastructure first: LAN/WAN, Windows Server, Active Directory, and hardware repair, plus production web platforms. Run by Charles Tekpor.",
+    "EwenamTech provides network infrastructure, IT support and systems administration, network security and web development for businesses, schools and organisations in Ghana. Based in Mamfe-Akuapem, Eastern Region.",
+  keywords: [
+    "EwenamTech",
+    "network infrastructure Ghana",
+    "IT support Ghana",
+    "network management Ghana",
+    "cybersecurity Ghana",
+    "IT systems support",
+    "web development Ghana",
+    "business technology solutions Ghana",
+    "hardware repair Ghana",
+  ],
+  authors: [{ name: "Charles Tekpor" }],
+  creator: "Charles Tekpor",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "EwenamTech Services — Networking, IT Infrastructure & Software",
+    title: "EwenamTech — Reliable Technology. Secure Infrastructure.",
     description:
-      "Networking & infrastructure, IT support & systems administration, hardware repair, and full-stack development.",
+      "Network infrastructure, IT support, cybersecurity and software development for businesses, schools and organisations in Ghana.",
     type: "website",
-    images: [{ url: "/logo.png", width: 440, height: 431, alt: "EwenamTech Services" }],
+    url: SITE,
+    siteName: "EwenamTech",
+    locale: "en_GH",
+    images: [{ url: "/logo.png", width: 440, height: 431, alt: "EwenamTech" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "EwenamTech — Reliable Technology. Secure Infrastructure.",
+    description:
+      "Network infrastructure, IT support, cybersecurity and software development in Ghana.",
     images: ["/logo.png"],
   },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
