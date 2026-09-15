@@ -53,8 +53,8 @@ export const PROJECTS: Project[] = [
     shot: "/shots/masco-portal.jpg",
     shotAlt:
       "Staff sign-in screen of the MASCO school portal, showing the authorised-use and data-protection notice",
-    href: null,
-    hrefLabel: "Private system — staff access only",
+    href: "https://mamfe-apostolic-portal.vercel.app",
+    hrefLabel: "Live system — authentication required",
     summary:
       "A production school management platform built end-to-end as sole developer: a 22-table PostgreSQL database secured with Row Level Security across six roles, an automated SMS pipeline, and a curriculum-accurate grading engine.",
     stack: [
@@ -69,13 +69,13 @@ export const PROJECTS: Project[] = [
     overview:
       "A school management platform used by teaching and administrative staff for pupil records, terminal report cards and school-fee accounts. Built end-to-end — database schema, backend, React front end and deployment pipeline — as the sole developer.",
     problem:
-      "Pupil records, assessment scores and fee accounts were handled manually, which made termly reporting slow and made it hard to keep a consistent, auditable record across staff. The school needed something accurate and print-ready that non-technical staff could use daily without training overhead.",
+      "The school required a single system for managing pupil records, terminal report cards and school-fee accounts — one that produces accurate, official, print-ready output and restricts each member of staff to the records their role covers.",
     solution:
       "A role-based web portal on a PostgreSQL database, with access enforced at the database layer rather than only in the interface. Staff sign in, see only what their role permits, and produce report cards and transcripts directly from recorded assessment data.",
     approach: [
       "22-table PostgreSQL schema modelled around pupils, classes, terms, assessments and fee accounts",
       "Row Level Security policies enforced in the database, so access rules hold regardless of how the data is reached",
-      "Six-tier role model: admin, headteacher, teacher, bursar, auditor and staff",
+      "Six roles: admin, headteacher, teacher, bursar, auditor and staff",
       "Supabase Edge Functions (Deno) for server-side work that must not run in the browser",
       "Continuous deployment from Git via Vercel",
     ],
@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     ],
     security: [
       "Row Level Security applied across the schema, so authorisation is enforced by the database and not only by the UI",
-      "Six-tier role model limiting each account to the minimum data it needs",
+      "Six roles, each limited to the data that role needs",
       "SMS gateway credentials held server-side in Edge Functions, never exposed to the client",
       "A self-directed security review during the build identified and closed a privilege-escalation path",
       "An authorised-use and data-protection notice presented at sign-in",
@@ -190,7 +190,7 @@ export const PROJECTS: Project[] = [
       "Phone-based SMS OTP verification with Zod-validated server actions",
       "Prisma 6 over Supabase PostgreSQL for schema and data access",
       "Automated Vitest tests in a Git branch → pull request → CI/CD workflow",
-      "AI coding tools (Claude Code) used to accelerate implementation, with architecture, security design and final code review retained by the team",
+      "AI coding tools (Claude Code) used to accelerate implementation only — architecture, security design, testing, code review and technical ownership were the team's throughout",
     ],
     features: [
       "Customer: salon discovery via Leaflet/OpenStreetMap, booking, and status updates",
@@ -214,7 +214,7 @@ export const PROJECTS: Project[] = [
   {
     slug: "accra-metropolitan-area-network",
     title: "Accra Metropolitan Area Network",
-    subtitle: "Performance analysis and penetration testing of a simulated MAN",
+    subtitle: "Performance Analysis and Penetration Testing of Accra Metropolitan Area Network",
     category: "Research & Cybersecurity",
     status: "Academic research project",
     role: "Sole Researcher & Network Designer",
@@ -225,7 +225,7 @@ export const PROJECTS: Project[] = [
     href: null,
     hrefLabel: "Academic research project",
     summary:
-      "A metropolitan-scale network designed and simulated in GNS3, then measured for performance and tested for security — combining QoS measurement with penetration-testing activity and hardening recommendations.",
+      "A metropolitan-scale network designed and simulated in GNS3, used to evaluate controlled penetration-testing activities and their effects on quality-of-service metrics — throughput, latency, packet loss and jitter.",
     stack: [
       "GNS3",
       "VMware Workstation",
@@ -238,11 +238,11 @@ export const PROJECTS: Project[] = [
       "TCP/IP",
     ],
     overview:
-      "A research project that designs a metropolitan area network for an Accra-scale deployment, builds it as a working simulation, and then evaluates it on two axes that are usually studied separately: how well it performs under load, and how well it holds up under attack.",
+      "A research project that builds an Accra-scale metropolitan area network as a working simulation and evaluates controlled penetration-testing activities against it, measuring their effects on the network's quality-of-service metrics.",
     problem:
-      "Network designs are often evaluated for performance or for security, rarely both. A design that moves traffic efficiently can still expose services across segments it shouldn't, and hardening applied after the fact frequently costs throughput. The project set out to measure both on the same topology.",
+      "The project evaluates controlled penetration-testing activities and their effects on network QoS metrics within a simulated metropolitan network environment.",
     solution:
-      "A routed, segmented topology built in GNS3 with VyOS routing and virtualised hosts, instrumented for quality-of-service measurement and then subjected to penetration-testing activity from a Kali Linux attack host inside the simulation.",
+      "A routed, segmented topology built in GNS3 with VyOS routing and virtualised hosts, instrumented for quality-of-service measurement and then subjected to controlled penetration-testing activity from a Kali Linux attack host inside the simulation.",
     approach: [
       "Routed, segmented topology designed and built in GNS3",
       "VyOS providing routing between segments; VMware Workstation hosting the virtual machines",
@@ -265,10 +265,10 @@ export const PROJECTS: Project[] = [
     ],
     outcome: [
       "A working simulated metropolitan topology that can be rebuilt and re-tested",
-      "A combined performance-and-security method applied to a single design rather than to two separate ones",
+      "A repeatable method for measuring how controlled penetration-testing activity affects QoS on a given topology",
     ],
     pending:
-      "Measured QoS figures — throughput, latency, packet loss and jitter — sit in the research write-up and are not reproduced here. They can be added once confirmed against the final report.",
+      "Results not yet reported. Measured QoS figures — throughput, latency, packet loss and jitter — will be published here once confirmed against the final research report.",
   },
 ];
 

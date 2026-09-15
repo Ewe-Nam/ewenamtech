@@ -10,7 +10,6 @@ const LINKS = [
   { href: "/#security", label: "Security" },
   { href: "/#work", label: "Work" },
   { href: "/#about", label: "About" },
-  { href: "/portfolio", label: "Profile" },
   { href: "/#contact", label: "Contact" },
 ];
 
