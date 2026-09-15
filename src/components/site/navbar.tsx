@@ -7,8 +7,10 @@ import { Menu, X } from "lucide-react";
 
 const LINKS = [
   { href: "/#services", label: "Services" },
+  { href: "/#security", label: "Security" },
   { href: "/#work", label: "Work" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/#about", label: "About" },
+  { href: "/portfolio", label: "Profile" },
   { href: "/#contact", label: "Contact" },
 ];
 
@@ -42,7 +44,7 @@ export default function Navbar() {
             href="/#contact"
             className="hidden items-center rounded-full bg-white px-4 py-2 text-xs font-semibold text-sky-950 transition-colors hover:bg-sky-50 sm:inline-flex"
           >
-            Start a project
+            Start a Project
           </Link>
           <button
             type="button"
@@ -74,7 +76,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-1 inline-flex items-center justify-center rounded-full bg-white px-4 py-2.5 text-xs font-semibold text-sky-950"
             >
-              Start a project
+              Start a Project
             </Link>
           </div>
         </div>
